@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Css Starts -->
+    <link rel="stylesheet" href="style.css">
+  <!-- Css Ends -->
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<!-- 
+  Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days -->
+  <main>
+    <div class="container">
+      <div class="main-container">
+        <div class="form">
+          <div class="day calc">
+            <label for="day">day</label>
+            <input type="number" placeholder="DD" id="day" required>
+            <span class="err-day"></span>
+          </div>
+          <div class="month calc">
+            <label for="month">month</label>
+            <input type="number" id="month" placeholder="MM" required>
+            <span class="err-month"></span>
+          </div>
+          <div class="year calc">
+            <label for="year">year</label>
+            <input type="number" id="year" placeholder="YYYY" required>
+            <span class="err-year"></span>
+          </div>
+        </div>
+        <div class="calculate">
+          <span class="line"></span>
+          <button class="calculate-btn" ></button>
+        </div>
+        <div class="results">
+          <div class="for-years birth">
+            <p><span class="year-result">--</span> years</p>
+          </div>
+          <div class="for-months birth">
+            <p><span class="month-result">--</span> months</p>
+          </div>
+          <div class="for-days birth">
+            <p><span class="day-result">--</span> days</p>
+          </div>
+        </div>
+            </div>
+      </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="age.js" defer></script>
+</body>
+</html>

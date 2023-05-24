@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+    --fc-purple:hsl(259, 100%, 65%);
+    --fc-err:hsl(0, 100%, 67%);
+
+    --bg-container: hsl(0, 0%, 100%);
+    --bg-box:hsl(0, 0%, 94%);
+    --bg-body:hsl(0, 0%, 86%);
+    --bg-dmy:hsl(0, 1%, 44%);
+    --bg-main:hsl(0, 0%, 8%);
+}
+
+
+/* Style resets Starts */
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* Style resets Ends */
+
+/* Main Css Starts Here */
+body{
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background: var(--bg-body);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    background: var(--bg-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px 16px 30% 16px;
+    padding: 40px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+}
+.form{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    /* margin-bottom: 2rem; */
+}
+.calc{
+    display: flex;
+    flex-direction: column;
+}
+
+.calc span{
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--fc-err);
+}
+
+input{
+    color: var(--bg-main);
+    font-size: 25px;
+    font-weight: 600;
+    height: 45px;
+    width: 120px;
+    padding: .3rem .6rem;
+    outline: none;
+    caret-color: var(--bg-main);
+    border: 1px solid var(--bg-body);
+    border-radius: 6px;
+}
+
+input[type="number"]::placeholder{
+    color: var(--bg-body);
+}
+
+label{
+    color: var(--bg-dmy);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-bottom: .2rem;
+}
+
+.calculate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.calculate-btn{
+    background: url('./assets/images/icon-arrow.svg') var(--fc-purple) no-repeat;
+    background-position: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    border: none;
+}
+
+.calculate-btn:focus{
+    background: url('./assets/images/icon-arrow.svg') no-repeat var(--bg-main);
+    background-position: center;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background: var(--bg-body);
+    position: absolute;
+}
+.results{
+    font-size: 5rem;
+    line-height: 5rem;
+}
+.results p {
+    font-weight: 800;
+    font-style: italic;
+}
+.birth p span{
+
+    color: var(--fc-purple);
+}
+/* Main Css Ends Here */
+
+@media screen and (width <= 620px){
+    .container{
+    width: 90vw;
+    padding: 10px;
+    border-radius: 16px 16px 20% 16px;
+    }
+    .form{
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    input{
+        width: 80px;
+    }
+    .calc{
+        width: 90px;
+    }
+    .calculate{
+        align-items: center;
+        justify-content: center;
+    }
+    .calculate-btn{
+        right: inherit;
+    }
+    .results{
+        font-size: 4rem;
+    }
+
+}
